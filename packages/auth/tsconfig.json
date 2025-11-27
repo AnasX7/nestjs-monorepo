@@ -1,7 +1,6 @@
 {
 	"extends": "@repo/typescript-config/base.json",
 	"compilerOptions": {
-		"declarationMap": true,
 		"sourceMap": true,
 		"outDir": "dist"
 	}
