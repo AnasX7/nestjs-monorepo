@@ -218,6 +218,9 @@ importers:
       '@nestjs/mapped-types':
         specifier: '*'
         version: 2.1.0(@nestjs/common@11.1.8(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)
+      '@types/node':
+        specifier: ^22.10.7
+        version: 22.19.0
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -228,9 +231,6 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      '@types/node':
-        specifier: ^22.10.7
-        version: 22.19.0
       ts-loader:
         specifier: ^9.4.3
         version: 9.5.4(typescript@5.9.3)(webpack@5.102.1)
