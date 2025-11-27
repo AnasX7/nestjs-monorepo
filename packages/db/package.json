@@ -28,6 +28,7 @@
     "typescript": "catalog:"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "prisma": "^7.0.1"
   },
   "dependencies": {
