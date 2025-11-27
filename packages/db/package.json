@@ -15,7 +15,7 @@
     "generated"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc",
     "db:studio": "prisma studio",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
@@ -24,9 +24,11 @@
     "db:stop": "docker compose stop",
     "db:down": "docker compose down"
   },
-  "devDependencies": {
-    "prisma": "^7.0.1",
+  "peerDependencies": {
     "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "prisma": "^7.0.1"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.0.1",

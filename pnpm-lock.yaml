@@ -276,6 +276,9 @@ importers:
       dotenv:
         specifier: ^17.2.2
         version: 17.2.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
       zod:
         specifier: ^4.1.11
         version: 4.1.13
@@ -283,9 +286,6 @@ importers:
       prisma:
         specifier: ^7.0.1
         version: 7.0.1(@types/react@19.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
 
   packages/eslint-config:
     devDependencies:
@@ -327,6 +327,10 @@ importers:
         version: 8.46.4(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
 
   packages/jest-config:
+    dependencies:
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
     devDependencies:
       '@jest/types':
         specifier: ^29.6.3
@@ -337,9 +341,6 @@ importers:
       next:
         specifier: ^15.4.2
         version: 15.5.6(@babel/core@7.28.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
 
   packages/typescript-config: {}
 
@@ -351,6 +352,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.2.0(react@19.2.0)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -370,9 +374,6 @@ importers:
       eslint:
         specifier: ^9.31.0
         version: 9.39.1(jiti@2.6.1)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
 
 packages:
 
