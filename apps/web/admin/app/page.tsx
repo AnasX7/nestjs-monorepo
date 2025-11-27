@@ -54,7 +54,7 @@ export default async function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>apps/web/app/page.tsx</code>
+            Get started by editing <code>apps/web/admin/app/page.tsx</code>
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
@@ -85,7 +85,7 @@ export default async function Home() {
           </a>
         </div>
 
-        <Button appName="web" className={styles.secondary}>
+        <Button appName="admin" className={styles.secondary}>
           Open alert
         </Button>
 

@@ -11,10 +11,21 @@ import {
 import type { CreateLinkDto, UpdateLinkDto } from '@repo/api';
 
 import { LinksService } from './links.service';
+import { EnvService } from '../config/env.service';
+import { PrismaService } from '../db/prisma.service';
 
 @Controller('links')
 export class LinksController {
-  constructor(private readonly linksService: LinksService) {}
+  constructor(
+    private readonly linksService: LinksService,
+    private readonly env: EnvService,
+    private prisma: PrismaService,
+  ) {
+    this.prisma.bookmark
+      .findFirstOrThrow()
+      .then((bookmark) => console.log(bookmark))
+      .catch((error) => console.error("Primsa work corretly"));
+  }
 
   @Post()
   create(@Body() createLinkDto: CreateLinkDto) {
