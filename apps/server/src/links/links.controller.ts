@@ -20,12 +20,7 @@ export class LinksController {
     private readonly linksService: LinksService,
     private readonly env: EnvService,
     private prisma: PrismaService,
-  ) {
-    this.prisma.bookmark
-      .findFirstOrThrow()
-      .then((bookmark) => console.log(bookmark))
-      .catch((error) => console.error("Primsa work corretly"));
-  }
+  ) {}
 
   @Post()
   create(@Body() createLinkDto: CreateLinkDto) {

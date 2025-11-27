@@ -1,12 +1,21 @@
 {
   "name": "@repo/db",
-  "main": "./src/index.js",
-  "types": "./src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
+  "files": [
+    "dist",
+    "prisma",
+    "generated"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "db:studio": "prisma studio",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
@@ -16,11 +25,14 @@
     "db:down": "docker compose down"
   },
   "devDependencies": {
-    "prisma": "^7.0.0",
+    "prisma": "^7.0.1",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@prisma/client": "^7.0.0",
+    "@prisma/adapter-pg": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "@prisma/client-runtime-utils": "^7.0.1",
+    "@prisma/extension-accelerate": "^3.0.0",
     "dotenv": "^17.2.2",
     "zod": "^4.1.11"
   }
