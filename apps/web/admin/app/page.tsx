@@ -1,4 +1,3 @@
-import type { Link } from '@repo/api';
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
 
@@ -22,36 +21,32 @@ const ThemeImage = (props: Props) => {
   );
 };
 
-async function getLinks(): Promise<Link[]> {
+async function checkApiConnection(): Promise<boolean> {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/links`,
+      `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/`,
       {
         cache: 'no-store',
       },
     );
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch links');
-    }
-
-    return res.json();
+    return res.ok;
   } catch (error) {
-    console.error('Error fetching links:', error);
-    return [];
+    console.error('Error connecting to API:', error);
+    return false;
   }
 }
 
 export default async function Home() {
-  const links = await getLinks();
+  const isApiConnected = await checkApiConnection();
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <ThemeImage
           className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
+          srcLight="/turborepo-dark.svg"
+          srcDark="/turborepo-light.svg"
           alt="Turborepo logo"
           width={180}
           height={38}
@@ -94,27 +89,23 @@ export default async function Home() {
           Open alert
         </Button>
 
-        {links.length > 0 ? (
-          <div className={styles.ctas}>
-            {links.map((link) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={link.description}
-                className={styles.secondary}
-              >
-                {link.title}
-              </a>
-            ))}
+        <div className={styles.ctas}>
+          <div className={styles.apiStatus}>
+            <div
+              className={`${styles.statusIndicator} ${isApiConnected ? styles.connected : styles.disconnected}`}
+            />
+            <div>
+              <div className={styles.statusText}>
+                {isApiConnected ? 'API Connected' : 'API Disconnected'}
+              </div>
+              {!isApiConnected && (
+                <div className={styles.statusDescription}>
+                  Start the NestJS server on port 3000
+                </div>
+              )}
+            </div>
           </div>
-        ) : (
-          <div style={{ color: '#666' }}>
-            No links available. Make sure the NestJS API is running on port
-            3000.
-          </div>
-        )}
+        </div>
       </main>
 
       <footer className={styles.footer}>

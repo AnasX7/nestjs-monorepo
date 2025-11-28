@@ -68,7 +68,10 @@
   padding: 0 20px;
   font-family: var(--font-geist-sans);
   border: 1px solid transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -96,7 +99,10 @@ button.secondary {
   padding: 0 20px;
   font-family: var(--font-geist-sans);
   border: 1px solid transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -183,4 +189,62 @@ button.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.apiStatus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--gray-alpha-200);
+  background: var(--gray-alpha-100);
+  font-family: var(--font-geist-sans);
+  font-size: 14px;
+  line-height: 20px;
+  transition: all 0.3s ease;
+}
+
+.apiStatus:hover {
+  border-color: var(--gray-alpha-200);
+  transform: translateY(-1px);
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.statusIndicator.connected {
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+}
+
+.statusIndicator.disconnected {
+  background: #ef4444;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+}
+
+.statusText {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.statusDescription {
+  opacity: 0.6;
+  font-size: 13px;
 }
