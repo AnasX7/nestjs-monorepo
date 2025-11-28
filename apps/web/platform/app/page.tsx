@@ -2,6 +2,8 @@ import type { Link } from '@repo/api';
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
 
+export const dynamic = 'force-dynamic';
+
 import styles from './page.module.css';
 
 type Props = Omit<ImageProps, 'src'> & {
@@ -22,9 +24,12 @@ const ThemeImage = (props: Props) => {
 
 async function getLinks(): Promise<Link[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/links`, {
-      cache: 'no-store',
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/links`,
+      {
+        cache: 'no-store',
+      },
+    );
 
     if (!res.ok) {
       throw new Error('Failed to fetch links');
