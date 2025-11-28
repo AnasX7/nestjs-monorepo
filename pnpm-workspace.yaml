@@ -1,7 +1,16 @@
 packages:
-  - 'apps/*'
-  - 'apps/web/*'
-  - 'packages/*'
+  - "apps/*"
+  - "apps/web/*"
+  - "packages/*"
 
 catalog:
-  typescript: ^5.9.2
+  typescript: ^5.9.3
+  better-auth: ^1.4.3
+  dotenv: ^17.2.3
+  zod: ^4.1.13
+  "@types/node": ^22.19.1
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  "@prisma/client": ^7.0.1
+  "@types/react": ^19.2.7
+  "@better-auth/expo": ^1.4.3

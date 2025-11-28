@@ -31,12 +31,12 @@
   },
   "dependencies": {
     "@nestjs/mapped-types": "*",
-    "@types/node": "^22.10.7"
+    "@types/node": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "ts-loader": "^9.4.3",
+    "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2"
   }
 }

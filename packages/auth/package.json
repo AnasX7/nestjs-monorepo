@@ -19,10 +19,10 @@
     "typescript": "catalog:"
   },
   "dependencies": {
-    "@better-auth/expo": "^1.4.3",
+    "@better-auth/expo": "catalog:",
     "@repo/db": "workspace:*",
-    "better-auth": "^1.4.3",
-    "dotenv": "^17.2.2",
-    "zod": "^4.1.11"
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
   }
 }
