@@ -6,7 +6,7 @@ import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { prisma } from '@repo/db';
 
 dotenv.config({
-  path: '../../apps/server/.env',
+  path: '../../../apps/server/.env',
 });
 
 export const auth = betterAuth({
