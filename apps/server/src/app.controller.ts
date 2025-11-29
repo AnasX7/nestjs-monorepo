@@ -22,22 +22,21 @@ export class AppController {
 
   @Get('post')
   async postHello() {
-    let user;
     try {
-      user = await this.authService.api.createUser({
+      const apiUser = await this.authService.api.createUser({
         body: {
           name: 'test',
           email: 'test@example.com',
           password: 'password',
         },
       });
+      return this.appService.postHello(apiUser);
     } catch (error) {
-      user = {
+      const user = {
         name: 'test',
-        message: error.message,
         error,
       };
+      return this.appService.postHello(user);
     }
-    return this.appService.postHello(user);
   }
 }
