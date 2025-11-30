@@ -18,8 +18,7 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "typescript": "catalog:",
-    "@types/node": "catalog:"
+    "typescript": "catalog:"
   },
   "dependencies": {
     "@better-auth/expo": "catalog:",

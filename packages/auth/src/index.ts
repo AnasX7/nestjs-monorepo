@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv';
 import { betterAuth } from 'better-auth';
 import { admin, openAPI } from 'better-auth/plugins';
 import { checkout, polar, portal } from '@polar-sh/better-auth';
@@ -5,6 +6,10 @@ import { expo } from '@better-auth/expo';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { prisma } from '@repo/db';
 import { polarClient } from './lib/payment.js';
+
+dotenv.config({
+  path: '../../../apps/server/.env',
+});
 
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
