@@ -18,9 +18,7 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "typescript": "catalog:"
-  },
-  "devDependencies": {
+    "typescript": "catalog:",
     "@types/node": "catalog:"
   },
   "dependencies": {
