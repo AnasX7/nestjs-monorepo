@@ -20,6 +20,8 @@
         "POLAR_ACCESS_TOKEN",
         "POLAR_SUCCESS_URL",
         "CORS_ORIGIN",
+        "THROTTLE_TTL",
+        "THROTTLE_LIMIT",
         "R2_ENDPOINT",
         "R2_ACCESS_KEY_ID",
         "R2_SECRET_ACCESS_KEY",

@@ -1,4 +1,4 @@
-import { Button } from '@repo/ui/button';
+import { Button } from '@repo/ui/components/button';
 import Image, { type ImageProps } from 'next/image';
 import { apiClient } from '@/lib/api';
 
@@ -45,7 +45,7 @@ export default async function Home() {
           alt="Turborepo logo"
           width={180}
           height={38}
-          priority
+          preload
         />
         <ol>
           <li>
