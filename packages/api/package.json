@@ -14,16 +14,18 @@
     "build": "tsc",
     "dev": "tsc --watch"
   },
-  "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@types/node": "catalog:",
+  "peerDependencies": {
     "typescript": "catalog:"
   },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:"
+  },
   "dependencies": {
-    "@orpc/contract": "^1.12.0",
-    "@orpc/nest": "^1.12.0",
+    "@orpc/contract": "catalog:",
+    "@orpc/nest": "catalog:",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
-    "zod": "^4.1.13"
+    "zod": "catalog:"
   }
 }

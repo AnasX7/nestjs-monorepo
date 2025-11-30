@@ -9,6 +9,18 @@ catalogs:
     '@better-auth/expo':
       specifier: ^1.4.3
       version: 1.4.3
+    '@orpc/client':
+      specifier: ^1.12.0
+      version: 1.12.0
+    '@orpc/contract':
+      specifier: ^1.12.0
+      version: 1.12.0
+    '@orpc/nest':
+      specifier: ^1.12.0
+      version: 1.12.0
+    '@orpc/openapi-client':
+      specifier: ^1.12.0
+      version: 1.12.0
     '@prisma/client':
       specifier: ^7.0.1
       version: 7.0.1
@@ -81,7 +93,7 @@ importers:
         specifier: ^6.4.0
         version: 6.4.0(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(reflect-metadata@0.2.2)
       '@orpc/nest':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(express@5.1.0)(rxjs@7.8.2)(ws@8.18.3)
       '@repo/api':
         specifier: workspace:^
@@ -177,8 +189,14 @@ importers:
 
   apps/web/admin:
     dependencies:
+      '@orpc/client':
+        specifier: 'catalog:'
+        version: 1.12.0
       '@orpc/contract':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
+        version: 1.12.0
+      '@orpc/openapi-client':
+        specifier: 'catalog:'
         version: 1.12.0
       '@repo/api':
         specifier: workspace:^
@@ -227,13 +245,13 @@ importers:
   apps/web/platform:
     dependencies:
       '@orpc/client':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0
       '@orpc/contract':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0
       '@orpc/openapi-client':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0
       '@repo/api':
         specifier: workspace:^
@@ -282,10 +300,10 @@ importers:
   packages/api:
     dependencies:
       '@orpc/contract':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0
       '@orpc/nest':
-        specifier: ^1.12.0
+        specifier: 'catalog:'
         version: 1.12.0(@nestjs/common@11.1.9(class-transformer@0.5.1)(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.9)(express@5.1.0)(rxjs@7.8.2)(ws@8.18.3)
       class-transformer:
         specifier: ^0.5.1
@@ -293,8 +311,11 @@ importers:
       class-validator:
         specifier: ^0.14.1
         version: 0.14.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
       zod:
-        specifier: ^4.1.13
+        specifier: 'catalog:'
         version: 4.1.13
     devDependencies:
       '@repo/typescript-config':
@@ -303,9 +324,6 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.19.1
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
 
   packages/auth:
     dependencies:
