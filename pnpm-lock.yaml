@@ -354,10 +354,6 @@ importers:
       zod:
         specifier: 'catalog:'
         version: 4.1.13
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.19.1
 
   packages/db:
     dependencies:
