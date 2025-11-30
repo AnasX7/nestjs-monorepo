@@ -5,7 +5,10 @@ import { ResponseValidationPlugin } from '@orpc/contract/plugins';
 import { contract } from '@repo/api';
 
 const link = new OpenAPILink(contract, {
-  url: process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000',
+  url:
+    process.env.NEXT_PUBLIC_NODE_ENV === 'production'
+      ? process.env.NEXT_PUBLIC_SERVER_URL!
+      : 'http://localhost:3000',
   fetch: (request, init) => {
     return globalThis.fetch(request, {
       ...init,
@@ -20,6 +23,5 @@ const link = new OpenAPILink(contract, {
   plugins: [new ResponseValidationPlugin(contract)],
 });
 
-const client: ContractRouterClient<typeof contract> = createORPCClient(link);
-
-export const api = client;
+export const apiClient: ContractRouterClient<typeof contract> =
+  createORPCClient(link);
