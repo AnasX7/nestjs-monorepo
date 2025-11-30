@@ -20,8 +20,13 @@
   "peerDependencies": {
     "typescript": "catalog:"
   },
+  "devDependencies": {
+    "@types/node": "catalog:"
+  },
   "dependencies": {
     "@better-auth/expo": "catalog:",
+    "@polar-sh/better-auth": "catalog:",
+    "@polar-sh/sdk": "^0.41.5",
     "@repo/db": "workspace:*",
     "better-auth": "catalog:",
     "dotenv": "catalog:",

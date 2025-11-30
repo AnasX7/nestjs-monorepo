@@ -1,13 +1,10 @@
-import * as dotenv from 'dotenv';
 import { betterAuth } from 'better-auth';
 import { admin, openAPI } from 'better-auth/plugins';
-// import { expo } from '@better-auth/expo';
+import { checkout, polar, portal } from '@polar-sh/better-auth';
+import { expo } from '@better-auth/expo';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { prisma } from '@repo/db';
-
-dotenv.config({
-  path: '../../../apps/server/.env',
-});
+import { polarClient } from './lib/payment.js';
 
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
@@ -24,5 +21,27 @@ export const auth = betterAuth({
       httpOnly: true,
     },
   },
-  plugins: [admin(), openAPI()],
+  plugins: [
+    admin(),
+    openAPI(),
+    expo(),
+    polar({
+      client: polarClient,
+      createCustomerOnSignUp: true,
+      enableCustomerPortal: true,
+      use: [
+        checkout({
+          products: [
+            {
+              productId: '724c80c3-dd00-4038-a2fa-df9642863f44',
+              slug: 'pro',
+            },
+          ],
+          successUrl: process.env.POLAR_SUCCESS_URL,
+          authenticatedUsersOnly: true,
+        }),
+        portal(),
+      ],
+    }),
+  ],
 });
