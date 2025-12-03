@@ -27,6 +27,7 @@
     "@repo/db": "workspace:*",
     "better-auth": "catalog:",
     "dotenv": "catalog:",
+    "react-is": "^19.2.0",
     "zod": "catalog:"
   }
 }

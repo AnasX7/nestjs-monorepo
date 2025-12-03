@@ -414,8 +414,8 @@ export type LectureSourceCreateInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutSourcesInput
   artifacts?: Prisma.ArtifactSourceCreateNestedManyWithoutSourceInput
 }
@@ -435,8 +435,8 @@ export type LectureSourceUncheckedCreateInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifacts?: Prisma.ArtifactSourceUncheckedCreateNestedManyWithoutSourceInput
 }
 
@@ -495,8 +495,8 @@ export type LectureSourceCreateManyInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureSourceUpdateManyMutationInput = {
@@ -702,8 +702,8 @@ export type LectureSourceCreateWithoutLectureInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifacts?: Prisma.ArtifactSourceCreateNestedManyWithoutSourceInput
 }
 
@@ -721,8 +721,8 @@ export type LectureSourceUncheckedCreateWithoutLectureInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifacts?: Prisma.ArtifactSourceUncheckedCreateNestedManyWithoutSourceInput
 }
 
@@ -788,8 +788,8 @@ export type LectureSourceCreateWithoutArtifactsInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutSourcesInput
 }
 
@@ -808,8 +808,8 @@ export type LectureSourceUncheckedCreateWithoutArtifactsInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureSourceCreateOrConnectWithoutArtifactsInput = {
@@ -880,8 +880,8 @@ export type LectureSourceCreateManyLectureInput = {
   checksum?: string | null
   status: $Enums.ProcessingStatus
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureSourceUpdateWithoutLectureInput = {

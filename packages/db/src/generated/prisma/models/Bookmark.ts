@@ -210,7 +210,7 @@ export type BookmarkScalarWhereWithAggregatesInput = {
 }
 
 export type BookmarkCreateInput = {
-  createdAt: Date | string
+  createdAt?: Date | string
   user: Prisma.UserCreateNestedOneWithoutBookmarksInput
   lecture: Prisma.LectureCreateNestedOneWithoutBookmarksInput
 }
@@ -218,7 +218,7 @@ export type BookmarkCreateInput = {
 export type BookmarkUncheckedCreateInput = {
   userId: string
   lectureId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkUpdateInput = {
@@ -236,7 +236,7 @@ export type BookmarkUncheckedUpdateInput = {
 export type BookmarkCreateManyInput = {
   userId: string
   lectureId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkUpdateManyMutationInput = {
@@ -367,13 +367,13 @@ export type BookmarkUncheckedUpdateManyWithoutLectureNestedInput = {
 }
 
 export type BookmarkCreateWithoutUserInput = {
-  createdAt: Date | string
+  createdAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutBookmarksInput
 }
 
 export type BookmarkUncheckedCreateWithoutUserInput = {
   lectureId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkCreateOrConnectWithoutUserInput = {
@@ -412,13 +412,13 @@ export type BookmarkScalarWhereInput = {
 }
 
 export type BookmarkCreateWithoutLectureInput = {
-  createdAt: Date | string
+  createdAt?: Date | string
   user: Prisma.UserCreateNestedOneWithoutBookmarksInput
 }
 
 export type BookmarkUncheckedCreateWithoutLectureInput = {
   userId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkCreateOrConnectWithoutLectureInput = {
@@ -449,7 +449,7 @@ export type BookmarkUpdateManyWithWhereWithoutLectureInput = {
 
 export type BookmarkCreateManyUserInput = {
   lectureId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkUpdateWithoutUserInput = {
@@ -469,7 +469,7 @@ export type BookmarkUncheckedUpdateManyWithoutUserInput = {
 
 export type BookmarkCreateManyLectureInput = {
   userId: string
-  createdAt: Date | string
+  createdAt?: Date | string
 }
 
 export type BookmarkUpdateWithoutLectureInput = {

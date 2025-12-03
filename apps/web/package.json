@@ -31,7 +31,9 @@
     "react": "catalog:",
     "react-dom": "catalog:",
     "sonner": "^2.0.7",
-    "zod": "catalog:"
+    "zod": "catalog:",
+    "@prisma/client": "catalog:",
+    "pg": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

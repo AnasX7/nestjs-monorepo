@@ -270,8 +270,8 @@ export type LectureAssistantCreateInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutAssistantInput
   messages?: Prisma.ChatMessageCreateNestedManyWithoutAssistantInput
 }
@@ -283,8 +283,8 @@ export type LectureAssistantUncheckedCreateInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   messages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutAssistantInput
 }
 
@@ -319,8 +319,8 @@ export type LectureAssistantCreateManyInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureAssistantUpdateManyMutationInput = {
@@ -437,8 +437,8 @@ export type LectureAssistantCreateWithoutLectureInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   messages?: Prisma.ChatMessageCreateNestedManyWithoutAssistantInput
 }
 
@@ -448,8 +448,8 @@ export type LectureAssistantUncheckedCreateWithoutLectureInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   messages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutAssistantInput
 }
 
@@ -497,8 +497,8 @@ export type LectureAssistantCreateWithoutMessagesInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutAssistantInput
 }
 
@@ -509,8 +509,8 @@ export type LectureAssistantUncheckedCreateWithoutMessagesInput = {
   systemPrompt?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureAssistantCreateOrConnectWithoutMessagesInput = {

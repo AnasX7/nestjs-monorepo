@@ -408,8 +408,8 @@ export type ContentArtifactCreateInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
@@ -432,8 +432,8 @@ export type ContentArtifactUncheckedCreateInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
@@ -498,8 +498,8 @@ export type ContentArtifactCreateManyInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ContentArtifactUpdateManyMutationInput = {
@@ -767,8 +767,8 @@ export type ContentArtifactCreateWithoutOwnerInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardCreateNestedManyWithoutArtifactInput
@@ -789,8 +789,8 @@ export type ContentArtifactUncheckedCreateWithoutOwnerInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
@@ -856,8 +856,8 @@ export type ContentArtifactCreateWithoutLectureInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardCreateNestedManyWithoutArtifactInput
@@ -878,8 +878,8 @@ export type ContentArtifactUncheckedCreateWithoutLectureInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
@@ -924,8 +924,8 @@ export type ContentArtifactCreateWithoutSourcesInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
@@ -947,8 +947,8 @@ export type ContentArtifactUncheckedCreateWithoutSourcesInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
@@ -1024,8 +1024,8 @@ export type ContentArtifactCreateWithoutQaPairsInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   flashcards?: Prisma.FlashcardCreateNestedManyWithoutArtifactInput
@@ -1047,8 +1047,8 @@ export type ContentArtifactUncheckedCreateWithoutQaPairsInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
   sources?: Prisma.ArtifactSourceUncheckedCreateNestedManyWithoutArtifactInput
@@ -1124,8 +1124,8 @@ export type ContentArtifactCreateWithoutFlashcardsInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
@@ -1147,8 +1147,8 @@ export type ContentArtifactUncheckedCreateWithoutFlashcardsInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutArtifactInput
   sources?: Prisma.ArtifactSourceUncheckedCreateNestedManyWithoutArtifactInput
@@ -1224,8 +1224,8 @@ export type ContentArtifactCreateWithoutSharesInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   lecture: Prisma.LectureCreateNestedOneWithoutArtifactsInput
   owner: Prisma.UserCreateNestedOneWithoutArtifactsInput
   qaPairs?: Prisma.QAPairCreateNestedManyWithoutArtifactInput
@@ -1247,8 +1247,8 @@ export type ContentArtifactUncheckedCreateWithoutSharesInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   qaPairs?: Prisma.QAPairUncheckedCreateNestedManyWithoutArtifactInput
   flashcards?: Prisma.FlashcardUncheckedCreateNestedManyWithoutArtifactInput
   sources?: Prisma.ArtifactSourceUncheckedCreateNestedManyWithoutArtifactInput
@@ -1325,8 +1325,8 @@ export type ContentArtifactCreateManyOwnerInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ContentArtifactUpdateWithoutOwnerInput = {
@@ -1401,8 +1401,8 @@ export type ContentArtifactCreateManyLectureInput = {
   transcript?: string | null
   durationSeconds?: number | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ContentArtifactUpdateWithoutLectureInput = {

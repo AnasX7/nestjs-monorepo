@@ -275,8 +275,8 @@ export type FlashcardCreateInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutFlashcardsInput
 }
 
@@ -288,8 +288,8 @@ export type FlashcardUncheckedCreateInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type FlashcardUpdateInput = {
@@ -324,8 +324,8 @@ export type FlashcardCreateManyInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type FlashcardUpdateManyMutationInput = {
@@ -451,8 +451,8 @@ export type FlashcardCreateWithoutArtifactInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type FlashcardUncheckedCreateWithoutArtifactInput = {
@@ -462,8 +462,8 @@ export type FlashcardUncheckedCreateWithoutArtifactInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type FlashcardCreateOrConnectWithoutArtifactInput = {
@@ -514,8 +514,8 @@ export type FlashcardCreateManyArtifactInput = {
   hint?: string | null
   tags?: Prisma.FlashcardCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type FlashcardUpdateWithoutArtifactInput = {

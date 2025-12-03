@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv';
 import { betterAuth } from 'better-auth';
 import { admin, openAPI } from 'better-auth/plugins';
 import { checkout, polar, portal } from '@polar-sh/better-auth';
+import { nextCookies } from 'better-auth/next-js';
 import { expo } from '@better-auth/expo';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { prisma } from '@repo/db';
@@ -50,5 +51,6 @@ export const auth = betterAuth({
         portal(),
       ],
     }),
+    nextCookies(),
   ],
 });

@@ -333,8 +333,8 @@ export type QAPairCreateInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutQaPairsInput
 }
 
@@ -348,8 +348,8 @@ export type QAPairUncheckedCreateInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type QAPairUpdateInput = {
@@ -390,8 +390,8 @@ export type QAPairCreateManyInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type QAPairUpdateManyMutationInput = {
@@ -543,8 +543,8 @@ export type QAPairCreateWithoutArtifactInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type QAPairUncheckedCreateWithoutArtifactInput = {
@@ -556,8 +556,8 @@ export type QAPairUncheckedCreateWithoutArtifactInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type QAPairCreateOrConnectWithoutArtifactInput = {
@@ -612,8 +612,8 @@ export type QAPairCreateManyArtifactInput = {
   difficulty?: number | null
   tags?: Prisma.QAPairCreatetagsInput | string[]
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type QAPairUpdateWithoutArtifactInput = {

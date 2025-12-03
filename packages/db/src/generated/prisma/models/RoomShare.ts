@@ -275,8 +275,8 @@ export type RoomShareCreateInput = {
   id: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   room: Prisma.RoomCreateNestedOneWithoutSharesInput
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutSharesInput
   sharedBy: Prisma.UserCreateNestedOneWithoutRoomSharesInput
@@ -290,8 +290,8 @@ export type RoomShareUncheckedCreateInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   notes?: Prisma.RoomNoteUncheckedCreateNestedManyWithoutShareInput
 }
 
@@ -326,8 +326,8 @@ export type RoomShareCreateManyInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomShareUpdateManyMutationInput = {
@@ -545,8 +545,8 @@ export type RoomShareCreateWithoutSharedByInput = {
   id: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   room: Prisma.RoomCreateNestedOneWithoutSharesInput
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutSharesInput
   notes?: Prisma.RoomNoteCreateNestedManyWithoutShareInput
@@ -558,8 +558,8 @@ export type RoomShareUncheckedCreateWithoutSharedByInput = {
   artifactId: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   notes?: Prisma.RoomNoteUncheckedCreateNestedManyWithoutShareInput
 }
 
@@ -607,8 +607,8 @@ export type RoomShareCreateWithoutArtifactInput = {
   id: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   room: Prisma.RoomCreateNestedOneWithoutSharesInput
   sharedBy: Prisma.UserCreateNestedOneWithoutRoomSharesInput
   notes?: Prisma.RoomNoteCreateNestedManyWithoutShareInput
@@ -620,8 +620,8 @@ export type RoomShareUncheckedCreateWithoutArtifactInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   notes?: Prisma.RoomNoteUncheckedCreateNestedManyWithoutShareInput
 }
 
@@ -655,8 +655,8 @@ export type RoomShareCreateWithoutRoomInput = {
   id: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutSharesInput
   sharedBy: Prisma.UserCreateNestedOneWithoutRoomSharesInput
   notes?: Prisma.RoomNoteCreateNestedManyWithoutShareInput
@@ -668,8 +668,8 @@ export type RoomShareUncheckedCreateWithoutRoomInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   notes?: Prisma.RoomNoteUncheckedCreateNestedManyWithoutShareInput
 }
 
@@ -703,8 +703,8 @@ export type RoomShareCreateWithoutNotesInput = {
   id: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   room: Prisma.RoomCreateNestedOneWithoutSharesInput
   artifact: Prisma.ContentArtifactCreateNestedOneWithoutSharesInput
   sharedBy: Prisma.UserCreateNestedOneWithoutRoomSharesInput
@@ -717,8 +717,8 @@ export type RoomShareUncheckedCreateWithoutNotesInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomShareCreateOrConnectWithoutNotesInput = {
@@ -765,8 +765,8 @@ export type RoomShareCreateManySharedByInput = {
   artifactId: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomShareUpdateWithoutSharedByInput = {
@@ -807,8 +807,8 @@ export type RoomShareCreateManyArtifactInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomShareUpdateWithoutArtifactInput = {
@@ -849,8 +849,8 @@ export type RoomShareCreateManyRoomInput = {
   sharedById: string
   caption?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomShareUpdateWithoutRoomInput = {

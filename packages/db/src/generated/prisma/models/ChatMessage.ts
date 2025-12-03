@@ -279,8 +279,8 @@ export type ChatMessageCreateInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   assistant: Prisma.LectureAssistantCreateNestedOneWithoutMessagesInput
 }
 
@@ -292,8 +292,8 @@ export type ChatMessageUncheckedCreateInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ChatMessageUpdateInput = {
@@ -328,8 +328,8 @@ export type ChatMessageCreateManyInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ChatMessageUpdateManyMutationInput = {
@@ -452,8 +452,8 @@ export type ChatMessageCreateWithoutAssistantInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ChatMessageUncheckedCreateWithoutAssistantInput = {
@@ -463,8 +463,8 @@ export type ChatMessageUncheckedCreateWithoutAssistantInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ChatMessageCreateOrConnectWithoutAssistantInput = {
@@ -515,8 +515,8 @@ export type ChatMessageCreateManyAssistantInput = {
   toolName?: string | null
   model?: string | null
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type ChatMessageUpdateWithoutAssistantInput = {

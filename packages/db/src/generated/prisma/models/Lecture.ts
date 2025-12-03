@@ -285,8 +285,8 @@ export type LectureCreateInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
@@ -302,8 +302,8 @@ export type LectureUncheckedCreateInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
@@ -347,8 +347,8 @@ export type LectureCreateManyInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureUpdateManyMutationInput = {
@@ -564,8 +564,8 @@ export type LectureCreateWithoutOwnerInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactCreateNestedManyWithoutLectureInput
@@ -579,8 +579,8 @@ export type LectureUncheckedCreateWithoutOwnerInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
@@ -632,8 +632,8 @@ export type LectureCreateWithoutFolderInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactCreateNestedManyWithoutLectureInput
@@ -647,8 +647,8 @@ export type LectureUncheckedCreateWithoutFolderInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
@@ -686,8 +686,8 @@ export type LectureCreateWithoutSourcesInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   artifacts?: Prisma.ContentArtifactCreateNestedManyWithoutLectureInput
@@ -702,8 +702,8 @@ export type LectureUncheckedCreateWithoutSourcesInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
   bookmarks?: Prisma.BookmarkUncheckedCreateNestedManyWithoutLectureInput
@@ -758,8 +758,8 @@ export type LectureCreateWithoutArtifactsInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
@@ -774,8 +774,8 @@ export type LectureUncheckedCreateWithoutArtifactsInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
   bookmarks?: Prisma.BookmarkUncheckedCreateNestedManyWithoutLectureInput
@@ -830,8 +830,8 @@ export type LectureCreateWithoutAssistantInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
@@ -846,8 +846,8 @@ export type LectureUncheckedCreateWithoutAssistantInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   bookmarks?: Prisma.BookmarkUncheckedCreateNestedManyWithoutLectureInput
@@ -902,8 +902,8 @@ export type LectureCreateWithoutBookmarksInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutLecturesInput
   folder: Prisma.FolderCreateNestedOneWithoutLecturesInput
   sources?: Prisma.LectureSourceCreateNestedManyWithoutLectureInput
@@ -918,8 +918,8 @@ export type LectureUncheckedCreateWithoutBookmarksInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   sources?: Prisma.LectureSourceUncheckedCreateNestedManyWithoutLectureInput
   artifacts?: Prisma.ContentArtifactUncheckedCreateNestedManyWithoutLectureInput
   assistant?: Prisma.LectureAssistantUncheckedCreateNestedOneWithoutLectureInput
@@ -975,8 +975,8 @@ export type LectureCreateManyOwnerInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureUpdateWithoutOwnerInput = {
@@ -1023,8 +1023,8 @@ export type LectureCreateManyFolderInput = {
   title: string
   description?: string | null
   language?: string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type LectureUpdateWithoutFolderInput = {

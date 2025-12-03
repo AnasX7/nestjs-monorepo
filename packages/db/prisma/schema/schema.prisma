@@ -20,16 +20,19 @@ generator client {
 // ============================================================================
 
 model User {
-  id            String   @id @map("_id")
+  id            String    @id @map("_id")
   name          String
   email         String
-  emailVerified Boolean
+  emailVerified Boolean   @default(false)
   image         String?
-  createdAt     DateTime
-  updatedAt     DateTime
-
-  sessions Session[]
-  accounts Account[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  role          String?
+  banned        Boolean?  @default(false)
+  banReason     String?
+  banExpires    DateTime?
+  sessions      Session[]
+  accounts      Account[]
 
   // ----------------- New Relations -----------------
   folders         Folder[] // Folders owned by the user
@@ -50,14 +53,15 @@ model Session {
   id        String   @id @map("_id")
   expiresAt DateTime
   token     String
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   ipAddress String?
   userAgent String?
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([token])
+  @@index([userId])
   @@map("session")
 }
 
@@ -74,9 +78,10 @@ model Account {
   refreshTokenExpiresAt DateTime?
   scope                 String?
   password              String?
-  createdAt             DateTime
-  updatedAt             DateTime
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
 
+  @@index([userId])
   @@map("account")
 }
 
@@ -85,9 +90,10 @@ model Verification {
   identifier String
   value      String
   expiresAt  DateTime
-  createdAt  DateTime?
-  updatedAt  DateTime?
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
 
+  @@index([identifier])
   @@map("verification")
 }
 
@@ -187,8 +193,8 @@ model Lecture {
 
   bookmarks Bookmark[]
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("lecture")
 }
@@ -215,8 +221,8 @@ model LectureSource {
 
   artifacts ArtifactSource[] // backref via join
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([lectureId])
   @@map("lecture_source")
@@ -254,8 +260,8 @@ model ContentArtifact {
   // Provenance of inputs used for this artifact
   sources ArtifactSource[]
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([lectureId, type])
   @@map("artifact")
@@ -288,8 +294,8 @@ model QAPair {
 
   metadata Json?
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([artifactId])
   @@map("qa_pair")
@@ -308,8 +314,8 @@ model Flashcard {
 
   metadata Json?
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([artifactId])
   @@map("flashcard")
@@ -334,8 +340,8 @@ model LectureAssistant {
 
   messages ChatMessage[]
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("lecture_assistant")
 }
@@ -352,8 +358,8 @@ model ChatMessage {
   model    String? // actual model used for this turn (if routed)
   metadata Json?
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([assistantId, createdAt])
   @@map("chat_message")
@@ -372,7 +378,7 @@ model Bookmark {
   user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   lecture Lecture @relation(fields: [lectureId], references: [id], onDelete: Cascade)
 
-  createdAt DateTime
+  createdAt DateTime @default(now())
 
   @@id([userId, lectureId])
   @@map("bookmark")
@@ -396,8 +402,8 @@ model Room {
   memberships RoomMembership[]
   shares      RoomShare[]
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("room")
 }
@@ -419,8 +425,8 @@ model RoomMembership {
   status MemberStatus // INVITED/ACCEPTED/...
 
   joinedAt  DateTime?
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
   @@unique([roomId, userId])
   @@map("room_membership")
@@ -443,8 +449,8 @@ model RoomShare {
 
   notes RoomNote[]
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Prevent identical duplicate shares by the same person
   @@unique([roomId, artifactId, sharedById])
@@ -465,8 +471,8 @@ model RoomNote {
   content  String @db.Text
   metadata Json?
 
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([shareId, createdAt])
   @@map("room_note")

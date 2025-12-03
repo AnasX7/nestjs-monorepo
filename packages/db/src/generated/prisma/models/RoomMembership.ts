@@ -288,8 +288,8 @@ export type RoomMembershipCreateInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   invitedBy?: Prisma.UserCreateNestedOneWithoutInvitationsSentInput
   room: Prisma.RoomCreateNestedOneWithoutMembershipsInput
   user: Prisma.UserCreateNestedOneWithoutRoomMembershipsInput
@@ -303,8 +303,8 @@ export type RoomMembershipUncheckedCreateInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipUpdateInput = {
@@ -339,8 +339,8 @@ export type RoomMembershipCreateManyInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipUpdateManyMutationInput = {
@@ -554,8 +554,8 @@ export type RoomMembershipCreateWithoutUserInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   invitedBy?: Prisma.UserCreateNestedOneWithoutInvitationsSentInput
   room: Prisma.RoomCreateNestedOneWithoutMembershipsInput
 }
@@ -567,8 +567,8 @@ export type RoomMembershipUncheckedCreateWithoutUserInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipCreateOrConnectWithoutUserInput = {
@@ -586,8 +586,8 @@ export type RoomMembershipCreateWithoutInvitedByInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   room: Prisma.RoomCreateNestedOneWithoutMembershipsInput
   user: Prisma.UserCreateNestedOneWithoutRoomMembershipsInput
 }
@@ -599,8 +599,8 @@ export type RoomMembershipUncheckedCreateWithoutInvitedByInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipCreateOrConnectWithoutInvitedByInput = {
@@ -665,8 +665,8 @@ export type RoomMembershipCreateWithoutRoomInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   invitedBy?: Prisma.UserCreateNestedOneWithoutInvitationsSentInput
   user: Prisma.UserCreateNestedOneWithoutRoomMembershipsInput
 }
@@ -678,8 +678,8 @@ export type RoomMembershipUncheckedCreateWithoutRoomInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipCreateOrConnectWithoutRoomInput = {
@@ -715,8 +715,8 @@ export type RoomMembershipCreateManyUserInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipCreateManyInvitedByInput = {
@@ -726,8 +726,8 @@ export type RoomMembershipCreateManyInvitedByInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipUpdateWithoutUserInput = {
@@ -803,8 +803,8 @@ export type RoomMembershipCreateManyRoomInput = {
   role: $Enums.MemberRole
   status: $Enums.MemberStatus
   joinedAt?: Date | string | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomMembershipUpdateWithoutRoomInput = {

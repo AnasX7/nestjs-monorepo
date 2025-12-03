@@ -263,8 +263,8 @@ export type RoomCreateInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutOwnedRoomsInput
   memberships?: Prisma.RoomMembershipCreateNestedManyWithoutRoomInput
   shares?: Prisma.RoomShareCreateNestedManyWithoutRoomInput
@@ -276,8 +276,8 @@ export type RoomUncheckedCreateInput = {
   description?: string | null
   ownerId: string
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   memberships?: Prisma.RoomMembershipUncheckedCreateNestedManyWithoutRoomInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutRoomInput
 }
@@ -312,8 +312,8 @@ export type RoomCreateManyInput = {
   description?: string | null
   ownerId: string
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomUpdateManyMutationInput = {
@@ -422,10 +422,6 @@ export type RoomUncheckedUpdateManyWithoutOwnerNestedInput = {
   deleteMany?: Prisma.RoomScalarWhereInput | Prisma.RoomScalarWhereInput[]
 }
 
-export type NullableBoolFieldUpdateOperationsInput = {
-  set?: boolean | null
-}
-
 export type RoomCreateNestedOneWithoutMembershipsInput = {
   create?: Prisma.XOR<Prisma.RoomCreateWithoutMembershipsInput, Prisma.RoomUncheckedCreateWithoutMembershipsInput>
   connectOrCreate?: Prisma.RoomCreateOrConnectWithoutMembershipsInput
@@ -459,8 +455,8 @@ export type RoomCreateWithoutOwnerInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   memberships?: Prisma.RoomMembershipCreateNestedManyWithoutRoomInput
   shares?: Prisma.RoomShareCreateNestedManyWithoutRoomInput
 }
@@ -470,8 +466,8 @@ export type RoomUncheckedCreateWithoutOwnerInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   memberships?: Prisma.RoomMembershipUncheckedCreateNestedManyWithoutRoomInput
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutRoomInput
 }
@@ -520,8 +516,8 @@ export type RoomCreateWithoutMembershipsInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutOwnedRoomsInput
   shares?: Prisma.RoomShareCreateNestedManyWithoutRoomInput
 }
@@ -532,8 +528,8 @@ export type RoomUncheckedCreateWithoutMembershipsInput = {
   description?: string | null
   ownerId: string
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   shares?: Prisma.RoomShareUncheckedCreateNestedManyWithoutRoomInput
 }
 
@@ -580,8 +576,8 @@ export type RoomCreateWithoutSharesInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   owner: Prisma.UserCreateNestedOneWithoutOwnedRoomsInput
   memberships?: Prisma.RoomMembershipCreateNestedManyWithoutRoomInput
 }
@@ -592,8 +588,8 @@ export type RoomUncheckedCreateWithoutSharesInput = {
   description?: string | null
   ownerId: string
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   memberships?: Prisma.RoomMembershipUncheckedCreateNestedManyWithoutRoomInput
 }
 
@@ -640,8 +636,8 @@ export type RoomCreateManyOwnerInput = {
   name: string
   description?: string | null
   isPrivate?: boolean | null
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomUpdateWithoutOwnerInput = {

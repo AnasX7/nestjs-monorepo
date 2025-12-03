@@ -10,4 +10,3 @@ export const auth = createAuthClient({
       : 'http://localhost:3000',
   plugins: [adminClient(), polarClient()],
 });
-

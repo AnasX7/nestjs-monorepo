@@ -256,8 +256,8 @@ export type RoomNoteCreateInput = {
   id: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   share: Prisma.RoomShareCreateNestedOneWithoutNotesInput
   author: Prisma.UserCreateNestedOneWithoutRoomNotesInput
 }
@@ -268,8 +268,8 @@ export type RoomNoteUncheckedCreateInput = {
   authorId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteUpdateInput = {
@@ -298,8 +298,8 @@ export type RoomNoteCreateManyInput = {
   authorId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteUpdateManyMutationInput = {
@@ -446,8 +446,8 @@ export type RoomNoteCreateWithoutAuthorInput = {
   id: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   share: Prisma.RoomShareCreateNestedOneWithoutNotesInput
 }
 
@@ -456,8 +456,8 @@ export type RoomNoteUncheckedCreateWithoutAuthorInput = {
   shareId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteCreateOrConnectWithoutAuthorInput = {
@@ -503,8 +503,8 @@ export type RoomNoteCreateWithoutShareInput = {
   id: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
   author: Prisma.UserCreateNestedOneWithoutRoomNotesInput
 }
 
@@ -513,8 +513,8 @@ export type RoomNoteUncheckedCreateWithoutShareInput = {
   authorId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteCreateOrConnectWithoutShareInput = {
@@ -548,8 +548,8 @@ export type RoomNoteCreateManyAuthorInput = {
   shareId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteUpdateWithoutAuthorInput = {
@@ -584,8 +584,8 @@ export type RoomNoteCreateManyShareInput = {
   authorId: string
   content: string
   metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt: Date | string
-  updatedAt: Date | string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type RoomNoteUpdateWithoutShareInput = {
