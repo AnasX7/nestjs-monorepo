@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useForm } from '@tanstack/react-form';
-import { auth } from '@/lib/auth-client';
+import { authClient } from '@/lib/auth-client';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { cn } from '@repo/ui/lib/utils';
@@ -16,7 +16,6 @@ import {
   FieldSeparator,
 } from '@repo/ui/components/field';
 import { Input } from '@repo/ui/components/input';
-import { Loader } from '@repo/ui/components/loader';
 
 const loginSchema = z.object({
   email: z.email('Invalid email address'),
@@ -28,7 +27,6 @@ export function SigninForm({
   ...props
 }: React.ComponentProps<'form'>) {
   const router = useRouter();
-  const { isPending } = auth.useSession();
 
   const form = useForm({
     defaultValues: {
@@ -39,7 +37,7 @@ export function SigninForm({
       onChange: loginSchema,
     },
     onSubmit: async ({ value }) => {
-      await auth.signIn.email(
+      await authClient.signIn.email(
         {
           email: value.email,
           password: value.password,
@@ -58,7 +56,7 @@ export function SigninForm({
   });
 
   const handleGitHubSignIn = async () => {
-    await auth.signIn.social(
+    await authClient.signIn.social(
       {
         provider: 'github',
       },
@@ -73,10 +71,6 @@ export function SigninForm({
       },
     );
   };
-
-  if (isPending) {
-    return <Loader />;
-  }
 
   return (
     <form

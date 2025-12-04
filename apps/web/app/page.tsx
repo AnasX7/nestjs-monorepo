@@ -27,7 +27,7 @@ export default async function Home() {
             <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
               <GalleryVerticalEnd className="size-4" />
             </div>
-            Monorepo Starter Kit
+            Better Nest Kit
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center">
@@ -36,7 +36,8 @@ export default async function Home() {
               <div className="flex flex-col items-center gap-2 text-center">
                 <h1 className="text-3xl font-bold">Welcome</h1>
                 <p className="text-muted-foreground text-balance">
-                  A modern monorepo starter with NestJS and Next.js
+                  A modern monorepo starter with NestJS and Next.js with
+                  better-auth and oRPC
                 </p>
               </div>
 

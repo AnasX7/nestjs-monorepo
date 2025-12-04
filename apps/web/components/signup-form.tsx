@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useForm } from '@tanstack/react-form';
 import { useRouter } from 'next/navigation';
-import { auth } from '@/lib/auth-client';
+import { authClient } from '@/lib/auth-client';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { cn } from '@repo/ui/lib/utils';
@@ -16,7 +16,6 @@ import {
   FieldSeparator,
 } from '@repo/ui/components/field';
 import { Input } from '@repo/ui/components/input';
-import { Loader } from '@repo/ui/components/loader';
 
 const signupSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -29,7 +28,6 @@ export function SignupForm({
   ...props
 }: React.ComponentProps<'form'>) {
   const router = useRouter();
-  const { isPending } = auth.useSession();
 
   const form = useForm({
     defaultValues: {
@@ -41,7 +39,7 @@ export function SignupForm({
       onChange: signupSchema,
     },
     onSubmit: async ({ value }) => {
-      await auth.signUp.email(
+      await authClient.signUp.email(
         {
           email: value.email,
           password: value.password,
@@ -60,12 +58,8 @@ export function SignupForm({
     },
   });
 
-  if (isPending) {
-    return <Loader />;
-  }
-
   const handleGitHubSignUp = async () => {
-    await auth.signIn.social(
+    await authClient.signIn.social(
       {
         provider: 'github',
       },

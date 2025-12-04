@@ -1,12 +1,23 @@
+import Link from 'next/link';
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { auth } from '@repo/auth';
 import { GalleryVerticalEnd } from 'lucide-react';
 import { TechStackVisual } from '@/components/tech-stack-visual';
-import Link from 'next/link';
 
-export default function AuthLayout({
+export default async function AuthLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (session) {
+    redirect('/');
+  }
+
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
@@ -15,7 +26,7 @@ export default function AuthLayout({
             <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
               <GalleryVerticalEnd className="size-4" />
             </div>
-            Monorepo Starter Kit
+            Better Nest Kit
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center">
